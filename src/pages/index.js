@@ -5,9 +5,9 @@ import Layout from '../components/Layout/Layout'
 const IndexPage = () => {
   const [list, setList] = useState([])
   useEffect(() => {
-    axios.get("https://cnodejs.org/api/v1/topics").then(res => {
-      if (res.data.success) {
-        setList(res.data.data ?? [])
+    axios.get("http://api-v1.weisuoke.com/student").then(res => {
+      if (res.status === 200) {
+        setList(res.data ?? [])
       }
     })
   }, [])
@@ -17,7 +17,7 @@ const IndexPage = () => {
         {list.map((item, index) => {
           return (
             <li key={index}>
-              {item.title}
+              {index} - {item.student_name}
             </li>
           )
         })}
