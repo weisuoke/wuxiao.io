@@ -5,7 +5,7 @@ import Layout from '../components/Layout/Layout'
 const IndexPage = () => {
   const [list, setList] = useState([])
   useEffect(() => {
-    axios.get("http://api-v1.weisuoke.com/student").then(res => {
+    axios.get("https://api-v1.weisuoke.com/student").then(res => {
       if (res.status === 200) {
         setList(res.data ?? [])
       }

@@ -1,15 +1,15 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
-import { StyledTopnav } from './Elements'
+import {StyledTopnav, StyledMenuItem, StyledLogo} from './Elements'
+import Logo from './logo.png'
 
 const Topnav = () => {
   return (
     <StyledTopnav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/about">About</Link></li>
-      </ul>
+      <StyledLogo src={Logo} alt=""/>
+      <StyledMenuItem to="/">Home</StyledMenuItem>
+      <StyledMenuItem to="/article">Article</StyledMenuItem>
+      <StyledMenuItem to="/gallery">Gallery</StyledMenuItem>
+      <StyledMenuItem to="/about">About</StyledMenuItem>
     </StyledTopnav>
   )
 }

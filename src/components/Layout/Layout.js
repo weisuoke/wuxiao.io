@@ -5,14 +5,16 @@ import "./app.css"
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <StyledTopnavWrapper>
-      <title>{pageTitle}</title>
+    <div>
       <Topnav />
-      <main>
-        <h1>{pageTitle}</h1>
-        {children}
-      </main>
-    </StyledTopnavWrapper>
+      <StyledTopnavWrapper>
+        <title>{pageTitle}</title>
+        <main>
+          <h1>{pageTitle}</h1>
+          {children}
+        </main>
+      </StyledTopnavWrapper>
+    </div>
   )
 }
 export default Layout

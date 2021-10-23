@@ -2,6 +2,6 @@ import styled from 'styled-components'
 
 export const StyledTopnavWrapper = styled.div`
   margin: auto;
-  max-width: 500px;
+  padding: 0 64px;
   font-family: sans-serif;
 `
